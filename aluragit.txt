@@ -118,8 +118,28 @@ Com diversos commits pequenos, suas alterações ficam mais fáceis de visualizar e
 
 *** Voltando anterior
 
-	utilizar checkout para realizar revert
+	utilizar checkout para realizar desfazer uma alteração 
 		caso tenha aplicado o ADD ele está no index
 		deve-se primeiramente retira-lo do index , para isso
 		digita-se git reset HEAD [nome do arquivo]
+
+	git reset [guid]
+		desfaz um commit , utilizado para recentes
+
+*** voltando antigos/desfazer
+	
+	utilizar o GIT REVERT
+
+		git revert [guid]
+
+*** local temporario 
+	
+	faz com que alterações não commitadas sejam salvas em um lugar temporario
 		
+		git stash
+
+	para consultar o que foi salvo no stash, 
+
+		git stash list
+
+
