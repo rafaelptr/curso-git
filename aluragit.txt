@@ -97,10 +97,11 @@ processo
 	*--> merge [branch] (git merge [branch])
 	*--> push	
 
-git rebase atualiza um branch com base na outra
+git rebase atualiza um branch com base na outra 	
 > git rebase --continue
 
 rebase [origem] [destino]
 
 **é uma boa prática sempre trabalhar em uma branch local que não seja a master!.
 
+ssss
