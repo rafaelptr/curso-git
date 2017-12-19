@@ -175,6 +175,21 @@ Como fazemos para guardar as alterações que estão no working directory e index e
 	.gitconfig 
 [alias]
 	envia = !git checkout master && git pull && git checkout dev && git rebase master && git checkout master && git merge dev && git push
+	git config --global alias.r reset
+		--global para salvar no arquivo
+
+[alias]
+        publica = !git checkout master && git pull && git checkout dev && git rebase master && git checkout master && git merge dev && git push
+
+        Agora, ao rodar o comando git publica, todo o processo abaixo será feito, em ordem, e interrompido caso o anterior falhe:
+
+		git checkout master: altera o local de trabalho para a branch master
+		git pull: atualiza o histórico da branch master
+		git checkout dev: altera o local de trabalho para a branch dev
+		git rebase master: atualiza o HEAD da branch dev para receber as alterações da branch master
+		git checkout master: altera o local de trabalho novamente para a branch master
+		git merge dev: mescla as alterações da branch dev na master
+		git push: envia suas alterações para o repositório remoto
 
 *** utilidades
 	LOG
@@ -195,3 +210,14 @@ Como fazemos para guardar as alterações que estão no working directory e index e
 	git log --graph
 
 	server para visualizar os ramos do nosso controle de versão, branches , merges , etc..
+
+
+*** git cherry-pick
+
+	pega um commit e joga apenas ele na master , mesm linha ok.
+
+	se não conflito , então vai ter q atualizar manualmente apagando os outros.
+	cuidado ao usar para não ter q resolver o conflito duas vezes , tanto no master quanto na branch dev
+
+
+	https://www.onwebsecurity.com/configuration/git-on-windows-location-of-global-configuration-file.html
