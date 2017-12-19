@@ -169,3 +169,29 @@ Como fazemos para guardar as alterações que estão no working directory e index e
 	HEAD^  penultimo
 	HEAD~1 penultimo
 	HEAD~2 antipenultimo	
+
+
+*** aliases
+	.gitconfig 
+[alias]
+	envia = !git checkout master && git pull && git checkout dev && git rebase master && git checkout master && git merge dev && git push
+
+*** utilidades
+	LOG
+		git log --pretty=oneline | short | full  -p
+		podendo ser oneline, short, medium, full, fuller, email, raw ou então, caso nenhum atenda as necessidades, 
+		é possível criar sua própria formatação de log.
+			Por exemplo: %an significa o nome do autor, %ad signfica a data e hora do commit e %s representa a mensagem de commit
+				git log --pretty='%an realizou commit em %ad: %s'
+				git log --pretty='%an realizou commit em %ad: %s' --graph
+
+*** multiplos remotes
+
+	vc pode ter multiplos remotes para fazer merges e pull requests ou seja outra pessoa q nao tem permissão faz um fork , cópia do código
+	e efetua alguma alteração, efetua o commit e sugere para efeutar um merge
+
+*** grafico para ver caminhos
+	
+	git log --graph
+
+	server para visualizar os ramos do nosso controle de versão, branches , merges , etc..
