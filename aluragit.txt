@@ -109,3 +109,8 @@ rebase [origem] [destino]
 --continue deve ser utilizado após a resolução manual de conflitos; 
 --skip faz com que suas alterações sejam descartadas; 
 --abort volta atrás em todo o processo de rebase
+
+
+Vários pequenos commits
+ 
+Com diversos commits pequenos, suas alterações ficam mais fáceis de visualizar e têm um histórico mais detalhado. Consequentemente, durante a resolução de conflitos fica mais fácil definir o que cada desenvolvedor quis fazer e decidir qual a abordagem que deve ser adotada. É mais simples também fazer uma reversão de um pequeno trecho, já que cada pequeno pedaço de código está separado em um único commit.
