@@ -114,3 +114,12 @@ rebase [origem] [destino]
 Vários pequenos commits
  
 Com diversos commits pequenos, suas alterações ficam mais fáceis de visualizar e têm um histórico mais detalhado. Consequentemente, durante a resolução de conflitos fica mais fácil definir o que cada desenvolvedor quis fazer e decidir qual a abordagem que deve ser adotada. É mais simples também fazer uma reversão de um pequeno trecho, já que cada pequeno pedaço de código está separado em um único commit.
+
+
+*** Voltando anterior
+
+	utilizar checkout para realizar revert
+		caso tenha aplicado o ADD ele está no index
+		deve-se primeiramente retira-lo do index , para isso
+		digita-se git reset HEAD [nome do arquivo]
+		
