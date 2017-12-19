@@ -142,4 +142,23 @@ Com diversos commits pequenos, suas alterações ficam mais fáceis de visualizar e
 
 		git stash list
 
+	para aplicar pode usar
 
+		git pop
+			pega a ultima
+
+		git apply stash@{0} 
+			pega o especificado
+
+		git drop
+			remove o temporario
+
+*** visualizar alterações
+
+	git show [guid]
+
+	git log
+
+	git whatchanged
+
+	git whatchanged -p
