@@ -132,6 +132,8 @@ Com diversos commits pequenos, suas alterações ficam mais fáceis de visualizar e
 
 		git revert [guid]
 
+
+Como fazemos para guardar as alterações que estão no working directory e index e retornar ao estado do último commit?
 *** local temporario 
 	
 	faz com que alterações não commitadas sejam salvas em um lugar temporario
@@ -162,3 +164,8 @@ Com diversos commits pequenos, suas alterações ficam mais fáceis de visualizar e
 	git whatchanged
 
 	git whatchanged -p
+
+*** referencia reset commit
+	HEAD^  penultimo
+	HEAD~1 penultimo
+	HEAD~2 antipenultimo	
