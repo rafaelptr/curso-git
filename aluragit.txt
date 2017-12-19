@@ -90,7 +90,7 @@ processo
 	*--> add e commit
 	*--> switch master(checkout master)
 	*--> pull master
-		-->se tiver
+		-->se tiver commits acima da local
 			--> rebase master [branch]
 				--> conflito
 					--> resolve e --continue para próximo
@@ -104,4 +104,3 @@ rebase [origem] [destino]
 
 **é uma boa prática sempre trabalhar em uma branch local que não seja a master!.
 
-ssss
