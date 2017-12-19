@@ -92,6 +92,9 @@ processo
 	--> pull master
 		-->se tiver
 			--> rebase master [branch]
+
+**é uma boa prática sempre trabalhar em uma branch local que não seja a master!.
+
 				--> conflito
 					--> resolve e --continue para próximo
 	--> merge [branch]
