@@ -1,0 +1,99 @@
+> git tag
+	--> Versões diferentes 
+	v0.1
+	v0.2
+> git diff v0.1 v0.2
+	--> Consegue visualizar alterações e diferenças
+> git blame css/index.css
+	--> visulizar commits e alterações
+> git clone
+	-->
+> git checkout 
+	--> pega um versão especifica 
+	--> pega um branch
+		--> -b cria também 
+> git init
+	--> inicializa git
+> git commit -m "Mensagem"
+	--> --m Message
+> git config 
+	--> global para o computador todo
+	--> user.name "Rafael Petronilio"
+	--> user.email "rafael.petronilio@itau-unibanco.com.br"
+> git add
+	--> add a.txt b.txt
+	--> add C:\a.txt
+	--> add .
+		--> todos arquivos do diretorio atual
+	--> Adicionar arquivos novos e arquivos alterados.
+	--> faz o track do arquivo, adicionando ao controle de versão
+	-->
+
+> git status 
+	--> o commando exibe um resumo dos arquivos modificados, adicionados ou removidos
+		do seu working directory, em comparação com o HEAD
+3 estados do ciclo git
+	working directory
+		representa estado atual dos arquivos no repositório
+	index ou staging area
+		representa uma visão preliminar das 
+		modificações que queremos definir para nosso projeto 
+		compando essas com o HEAD
+	head
+		passo completo do nosso projeto, que serve de referência 
+		para preaparação do trabalho com o working directory
+
+> git log
+	commits e mensagens dos de alterações
+> git whatchanged
+	--> -p o que foi alterado em cada commit
+> git remove
+	--> exibe a conexão feita com o servidor remoto
+	--> add origin [URL]
+		-->origin é o apelido
+> git push [nome] master
+	Envia as alterações para o repositório remoto
+	--> -u [nome] branch
+		--> cria a branch local
+
+> branches
+	--> desenvolver em uma area especifica e depois integrar na area principal (master)
+	-->
+> git branch
+	lista as brenchs locais
+	--> -a inclue as remotas
+	--> -r exibe branches remotas
+	--> -d deleta um branch
+
+> git push -d origin design
+	--> deleta branch remota
+	--> git push origin :design
+
+> git fetch origin
+	verifica todas as atualizações que foram realizadas no repositório de atalho origin
+> Conflicts 
+	Ocorre quando alterado o mesmo arquivo na mesma linha
+	Fatores que facilitam a diminuir conflitos são
+		commits frequentes
+		commits com pouco conteudo
+	em caso de conflitos de linhas distintas em mesmo arquivo o git é capaz
+	de realizar um merge automaticamente juntando as duas alterações
+
+
+Trabalhar com multiplas branches, cada um poderá criar sua branch local com o nome 
+que desejar, assim que as alterações forém feitas é necessário fazer 
+o pull da branch principal e realizar um merge no 
+branch principal.
+
+processo 
+	--> cria branch
+	--> commit branch
+	--> switch master
+	--> pull master
+		-->se tiver
+			--> rebase master [branch]
+				--> conflito
+					--> resolve e --continue para próximo
+	--> merge [branch]
+	--> push	
+> git rebase --continue
