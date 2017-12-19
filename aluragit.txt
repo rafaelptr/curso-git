@@ -86,17 +86,21 @@ o pull da branch principal e realizar um merge no
 branch principal.
 
 processo 
-	--> cria branch
-	--> commit branch
-	--> switch master
-	--> pull master
+	--> cria branch (checkout -b [branch]) local
+	*--> add e commit
+	*--> switch master(checkout master)
+	*--> pull master
 		-->se tiver
 			--> rebase master [branch]
+				--> conflito
+					--> resolve e --continue para próximo
+	*--> merge [branch] (git merge [branch])
+	*--> push	
+
+git rebase atualiza um branch com base na outra
+> git rebase --continue
+
+rebase [origem] [destino]
 
 **é uma boa prática sempre trabalhar em uma branch local que não seja a master!.
 
-				--> conflito
-					--> resolve e --continue para próximo
-	--> merge [branch]
-	--> push	
-> git rebase --continue
